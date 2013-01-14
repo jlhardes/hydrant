@@ -11,6 +11,8 @@
 	          # TO DO: Implement me
         	  logger.debug "<< Access flag = #{context[:access]} >>"
               	  mediaobject.access = context[:access]        
+
+                  mediaobject.hidden = context[:hidden] unless context[:hidden].blank?
         
 	          mediaobject.save
         	  logger.debug "<< Groups : #{mediaobject.read_groups} >>"
